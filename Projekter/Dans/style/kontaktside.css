@@ -1,0 +1,313 @@
+
+
+
+/*Dette er for hele dokumentet. For at fjerne allerede eksisterende margins og paddings*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*Dette tillader at inkludere padding og border i med regning til et elemetns totale width og height*/
+* {
+    box-sizing: border-box;
+  } 
+
+
+
+
+/*Dette er kodning til strukturen af hjemmesiden kodet i grid*/
+
+.skelet {
+  display: grid; /*grid*/
+  height: 100vh; /*fills the whole page*/
+  grid-template-columns: 1fr; /*define column*/
+  grid-template-rows: 0.5fr 5fr 0.3fr; /*define rows*/
+  grid-template-areas: /*select what elements to cover layout*/
+  "nav"
+  "main"
+  "footer";
+}
+
+
+/*navigationsmenu sektion*/
+nav {
+  background-color: #61707D;
+  grid-area: nav;                                                                  
+}
+
+/*Hovedindhold sektion*/
+main {
+  background-color: #F5FBEF;
+  grid-area: main;
+}
+
+/*fodmenu sektion*/
+footer {
+  background-color: #61707D;
+  grid-area: footer;
+}
+
+
+
+/*Navigationsmenu til hjemmesiden*/
+
+.navigationsmenu {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.navigationsmenu > li {
+  display: block;
+  height: 50px;
+  width: 18%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationsmenu li a {
+  color: black;
+  text-decoration: none;
+  background-color: #F5FBEF;
+  border-radius: 10px;
+}
+
+
+
+/*Fodmenu til hjemmesiden*/
+
+.fodmenu {
+  list-style-type: none; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 5%;
+  padding-right:5%;
+  color: white;
+}
+
+.fodmenu li a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "headline headline"
+    "contact contact"
+    "picture picture"
+    "footer footer"
+    ;
+}
+header{
+    background-color: blueviolet;
+}
+body{
+    background-color:#F5FBEF;
+}
+.headline{
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+grid-area: headline;
+font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    background-color: #61707D;
+    height: 500px;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: contact;
+    width: auto;
+
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 200%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: #F5FBEF;
+    
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #F5FBEF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    border-bottom: none;
+    cursor: pointer;
+    color:black;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #dad0eb;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    padding: 20px;
+  }
+
+.picturebox{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-area: picture;
+
+}
+.picture{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+
+
+
+/*HER ER TIL SKÆRM STØRRELSER. DENNE SEKTION SKAL STÅ NEDERST! sÅ SKRIV JERES INDHOLD FØR DETTE*/
+
+
+
+/*angivelse af columns og rows ved mindre enheder*/
+@media only screen and (max-width: 550px) {
+    .skelet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr 0.3fr; 
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+    }
+  }
+  
+  
+  /*mobil skærmstørrelse*/
+  @media screen and (min-width: 360px) {
+    .fodmenu {
+      font-size: 10px;
+      height: 5px;
+    }
+  
+    .navigationsmenu {
+      margin-top: 0.1vh;
+    }
+    .navigationsmenu li{
+      height: 1vh;
+      font-size: 14px;
+      margin-top: 3vh;
+    }
+  
+    .navigationsmenu li a {
+      padding: 12px 8px 12px 8px;
+    }
+  
+  
+    .forsidebillede {
+      width: 50px;
+    }
+  }
+  
+  
+  
+  /*Ipad skærmstørrelse*/
+  @media screen and (min-width: 768px) {
+    .fodmenu {
+      font-size: 18px;
+    }
+  
+    .navigationsmenu {
+      margin-top: 1vh;
+    }
+    .navigationsmenu li{
+      font-size: 30px;
+      margin-top: 2vh;
+    }
+  
+    .navigationsmenu li a {
+      padding: 10px 20px 10px 20px;
+    }
+  
+  
+    .forsidebillede {
+      width: 90px;
+    }
+  }
+  
+  
+  /*Ipad Pro skærmstørrelse*/
+  @media screen and (min-width: 1024px) {
+    .fodmenu {
+      font-size: 22px;
+    }
+  
+    .navigationsmenu {
+      margin-top: 2vh;
+    }
+    .navigationsmenu li{
+      height: 7vh;
+      font-size: 40px;
+      margin-top: 1.5vh;
+    }
+  
+    .navigationsmenu li a {
+      padding: 10px 20px 10px 20px;
+    }
+  
+  
+    .forsidebillede {
+      width: 90px;
+    }
+  }
+  
+  
+  /*Dennis' skærmstørrelse*/
+  @media screen and (min-width: 1536px) {
+    .fodmenu {
+      font-size: 14px;
+      height: 10px;
+    }
+  
+    .navigationsmenu li{
+      height: 6vh;
+      font-size: 32px;
+      margin-top: 3vh;
+    }
+  
+    .navigationsmenu li a {
+      padding: 20px 30px 20px 30px;
+    }
+  
+    .forsidebillede {
+      width: 100px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  

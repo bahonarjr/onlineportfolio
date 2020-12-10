@@ -1,0 +1,284 @@
+/*Dette er for hele dokumentet. For at fjerne allerede eksisterende margins og paddings*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*Dette tillader at inkludere padding og border i med regning til et elemetns totale width og height*/
+* {
+    box-sizing: border-box;
+  } 
+
+
+
+
+/*Dette er kodning til strukturen af hjemmesiden kodet i grid*/
+
+.skelet {
+  display: grid; /*grid*/
+  height: 100vh; /*fills the whole page*/
+  grid-template-columns: 1fr; /*define column*/
+  grid-template-rows: 0.5fr 5fr 0.3fr; /*define rows*/
+  grid-template-areas: /*select what elements to cover layout*/
+  "nav"
+  "main"
+  "footer";
+}
+
+
+/*navigationsmenu sektion*/
+nav {
+  background-color: #61707D;
+  grid-area: nav;                                                                  
+}
+
+/*Hovedindhold sektion*/
+main {
+  background-color: #F5FBEF;
+  grid-area: main;
+}
+
+/*fodmenu sektion*/
+footer {
+  background-color: #61707D;
+  grid-area: footer;
+}
+
+
+
+/*Navigationsmenu til hjemmesiden*/
+
+.navigationsmenu {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.navigationsmenu > li {
+  display: block;
+  height: 50px;
+  width: 18%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationsmenu li a {
+  color: black;
+  text-decoration: none;
+  background-color: #F5FBEF;
+  border-radius: 10px;
+}
+
+
+
+/*Fodmenu til hjemmesiden*/
+
+.fodmenu {
+  list-style-type: none; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 5%;
+  padding-right:5%;
+  color: white;
+}
+
+.fodmenu li a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*INDSÆT JERES INDHOLD NEDENUNDER DETTE PUNKT*/
+body {
+  background-color: #f5fbef;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Tekst {
+    font-family: verdana;
+    font-size: 25px;
+    align-items: center;
+}
+
+.Brødtekst1 {
+    background-color: white;
+    border-bottom: solid black;
+    display: flex;
+    text-align: left;
+    margin-left: 10px;
+    
+}
+
+.Billederedigering {
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+   
+}
+
+.Omos {
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.Billederedigering1 {
+  float: left;
+    margin-top: 10px;
+    padding-left: 10px;
+    
+}
+
+.Brødtekst2 {
+    background-color: white;
+    display: flex;
+}
+
+
+
+
+/*HER ER TIL SKÆRM STØRRELSER. DENNE SEKTION SKAL STÅ NEDERST! sÅ SKRIV JERES INDHOLD FØR DETTE*/
+
+
+
+/*angivelse af columns og rows ved mindre enheder*/
+@media only screen and (max-width: 550px) {
+  .skelet {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 5fr 0.3fr; 
+  grid-template-areas: 
+  "nav"
+  "main"
+  "footer";
+  }
+}
+
+
+/*mobil skærmstørrelse*/
+@media screen and (min-width: 360px) {
+  .fodmenu {
+    font-size: 10px;
+    height: 5px;
+  }
+
+  .navigationsmenu {
+    margin-top: 0.1vh;
+  }
+  .navigationsmenu li{
+    height: 1vh;
+    font-size: 14px;
+    margin-top: 3vh;
+  }
+
+  .navigationsmenu li a {
+    padding: 12px 8px 12px 8px;
+  }
+
+
+  .forsidebillede {
+    width: 50px;
+  }
+}
+
+
+
+/*Ipad skærmstørrelse*/
+@media screen and (min-width: 768px) {
+  .fodmenu {
+    font-size: 18px;
+  }
+
+  .navigationsmenu {
+    margin-top: 1vh;
+  }
+  .navigationsmenu li{
+    font-size: 30px;
+    margin-top: 2vh;
+  }
+
+  .navigationsmenu li a {
+    padding: 10px 20px 10px 20px;
+  }
+
+
+  .forsidebillede {
+    width: 90px;
+  }
+  
+}
+
+
+/*Ipad Pro skærmstørrelse*/
+@media screen and (min-width: 1024px) {
+  .fodmenu {
+    font-size: 22px;
+  }
+
+  .navigationsmenu {
+    margin-top: 2vh;
+  }
+  .navigationsmenu li{
+    height: 7vh;
+    font-size: 40px;
+    margin-top: 1.5vh;
+  }
+
+  .navigationsmenu li a {
+    padding: 10px 20px 10px 20px;
+  }
+
+
+  .forsidebillede {
+    width: 90px;
+  }
+}
+
+
+/*Dennis' skærmstørrelse*/
+@media screen and (min-width: 1536px) {
+  .fodmenu {
+    font-size: 14px;
+    height: 10px;
+  }
+
+  .navigationsmenu li{
+    height: 6vh;
+    font-size: 32px;
+    margin-top: 3vh;
+  }
+
+  .navigationsmenu li a {
+    padding: 20px 30px 20px 30px;
+  }
+
+  .forsidebillede {
+    width: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

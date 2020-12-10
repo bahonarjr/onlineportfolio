@@ -1,0 +1,398 @@
+/*Dette er for hele dokumentet. For at fjerne allerede eksisterende margins og paddings*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*Dette tillader at inkludere padding og border i med regning til et elemetns totale width og height*/
+* {
+    box-sizing: border-box;
+  } 
+
+
+
+
+/*Dette er kodning til strukturen af hjemmesiden kodet i grid*/
+
+.skelet {
+  display: grid; /*grid*/
+  height: 100vh; /*fills the whole page*/
+  grid-template-columns: 1fr; /*define column*/
+  grid-template-rows: 0.5fr 5fr 0.3fr; /*define rows*/
+  grid-template-areas: /*select what elements to cover layout*/
+  "nav"
+  "main"
+  "footer";
+}
+
+
+/*navigationsmenu sektion*/
+nav {
+  background-color: #61707D;
+  grid-area: nav;                                                                  
+}
+
+/*Hovedindhold sektion*/
+main {
+  background-color: #F5fbef;
+  grid-area: main;
+}
+
+/*fodmenu sektion*/
+footer {
+  background-color: #61707D;
+  grid-area: footer;
+}
+
+
+
+/*Navigationsmenu til hjemmesiden*/
+
+.navigationsmenu {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.navigationsmenu > li {
+  display: block;
+  height: 50px;
+  width: 18%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationsmenu li a {
+  color: black;
+  text-decoration: none;
+  background-color: #F5FBEF;
+  border-radius: 10px;
+}
+
+
+
+/*Fodmenu til hjemmesiden*/
+
+.fodmenu {
+  list-style-type: none; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 5%;
+  padding-right:5%;
+  color: white;
+}
+
+.fodmenu li a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*Startknap*/
+.startknap {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  background-color: #5acdff;
+  margin-bottom: 3vh;
+  margin-top: 5vh;
+  border-radius: 10px;
+}
+
+
+/*Tekst boks*/
+.fritidsinteresse {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color:blanchedalmond;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+/*Overskrift*/
+.dennisoverskrift {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*mellemskrift på personas*/
+.dennisunderskrift {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Brødtekst*/
+.dennisbrødtekst {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+
+/*test af billede*/
+.tekstmedbillede {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #e1f1ff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5vh;
+  margin-bottom: 5vh; 
+}
+
+
+
+.personabillede {
+  width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+/*INDSÆT JERES INDHOLD NEDENUNDER DETTE PUNKT*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HER ER TIL SKÆRM STØRRELSER. DENNE SEKTION SKAL STÅ NEDERST! sÅ SKRIV JERES INDHOLD FØR DETTE*/
+
+
+
+/*angivelse af columns og rows ved mindre enheder*/
+@media only screen and (max-width: 550px) {
+  .skelet {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 5fr 0.3fr; 
+  grid-template-areas: 
+  "nav"
+  "main"
+  "footer";
+  }
+}
+
+
+/*mobil skærmstørrelse*/
+@media screen and (min-width: 360px) {
+  .fodmenu {
+    font-size: 10px;
+    height: 5px;
+  }
+
+
+  /*hvor meget navigationen skubber links ned*/
+  .navigationsmenu {
+    margin-top: 0.1vh;
+  }
+
+  /*height og tekst størrelse på navigationsmenu*/
+  .navigationsmenu li{
+    height: 1vh;
+    font-size: 14px;
+    margin-top: 3vh;
+  }
+
+  /*padding rundt om lins i navigationen*/
+  .navigationsmenu li a {
+    padding: 12px 8px 12px 8px;
+  }
+
+/*Størrelse af forside billede*/
+  .forsidebillede {
+    width: 50px;
+  }
+
+  /*brødtekst størrelse*/
+  .dennisbrødtekst {
+    font-size: 22px;
+  }
+
+  /*størrelse tekst på startknap*/
+  .startknap {
+    font-size: 20px;
+  }
+
+/*størrelse på persona*/
+  .personabillede {
+    width: 50%;
+  }
+}
+
+
+
+/*Ipad skærmstørrelse*/
+@media screen and (min-width: 768px) {
+  .fodmenu {
+    font-size: 18px;
+  }
+
+
+  /*hvor meget navigationen skubber links ned*/  
+  .navigationsmenu {
+    margin-top: 1vh;
+  }
+
+
+   /*height og tekst størrelse på navigationsmenu*/
+  .navigationsmenu li{
+    font-size: 30px;
+    margin-top: 2vh;
+  }
+
+   /*padding rundt om lins i navigationen*/
+  .navigationsmenu li a {
+    padding: 10px 20px 10px 20px;
+  }
+
+/*Størrelse af forside billede*/
+  .forsidebillede {
+    width: 90px;
+  }
+
+  /*brødtekst størrelse*/
+  .dennisbrødtekst {
+    font-size: 30px;
+  }
+
+  /*størrelse tekst på startknap*/
+  .startknap {
+    font-size: 30px;
+  }
+/*størrelse på persona*/
+  .personabillede {
+    width: 40%;
+  }
+}
+
+
+/*Ipad Pro skærmstørrelse*/
+@media screen and (min-width: 1024px) {
+  .fodmenu {
+    font-size: 22px;
+  }
+
+    /*hvor meget navigationen skubber links ned*/
+  .navigationsmenu {
+    margin-top: 2vh;
+  }
+
+   /*height og tekst størrelse på navigationsmenu*/
+  .navigationsmenu li{
+    height: 7vh;
+    font-size: 40px;
+    margin-top: 1.5vh;
+  }
+
+   /*padding rundt om lins i navigationen*/
+  .navigationsmenu li a {
+    padding: 10px 20px 10px 20px;
+  }
+
+/*Størrelse af forside billede*/
+  .forsidebillede {
+    width: 90px;
+  }
+
+  /*brødtekst størrelse*/
+  .dennisbrødtekst {
+    font-size: 35px;
+  }
+
+  /*størrelse tekst på startknap*/
+  .startknap {
+    font-size: 30px;
+  }
+
+  /*størrelse på persona*/
+  .personabillede {
+    width: 30%;
+  }
+}
+
+
+/*Dennis' skærmstørrelse*/
+@media screen and (min-width: 1536px) {
+  .fodmenu {
+    font-size: 14px;
+    height: 10px;
+  }
+
+   /*height og tekst størrelse på navigationsmenu*/
+  .navigationsmenu li{
+    height: 6vh;
+    font-size: 32px;
+    margin-top: 3vh;
+  }
+
+   /*padding rundt om lins i navigationen*/
+  .navigationsmenu li a {
+    padding: 20px 30px 20px 30px;
+  }
+
+  /*Størrelse af forside billede*/
+  .forsidebillede {
+    width: 100px;
+  }
+
+  /*brødtekst størrelse*/
+  .dennisbrødtekst {
+    font-size: 30px;
+  }
+
+  /*størrelse tekst på startknap*/
+  .startknap {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
