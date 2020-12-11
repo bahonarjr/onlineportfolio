@@ -232,24 +232,24 @@ section{
     color: white;
     text-shadow: 2px 2px #111;
   }
+
+  .billede1{
+      width: 100%;
+  }
+
+  .billede2{
+      width: 100%;
+  }
+  
+  .billede3{
+      width: 100%;
+  }
   
   .boks2{
     color: white;
     text-shadow: 2px 2px #111;
   }
   
-  .boks1:hover{
-    background-color: var(--primary-light);
-    transition: color 0.7s ease-out;
-  }
-  .boks2:hover{
-    background-color: var(--primary-light);
-  }
-  
-  .boks3:hover{
-    background-color: var(--primary-light);
-  }
-
 /*contact */
 section{
     padding: 50px 0;
