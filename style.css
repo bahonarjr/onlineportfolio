@@ -186,9 +186,7 @@ section{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.about .about-content .right .text span{
-    color: crimson;
-}
+
 .about .about-content .right p{
     text-align: justify;
 }
@@ -208,6 +206,49 @@ section{
     color: #f2b705;
     background: none;
 }
+
+/*projekter*/
+.bokse{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+    background-color: #f2b705;
+  }
+
+  .boks1{
+      text-align: center;
+      padding: 10rem 0;
+  }
+  
+  .boks2,
+  .boks3{
+    margin-top: 2rem;
+    text-align: center;
+    padding: 10rem 0;
+  }
+  
+  .boks1{
+    color: white;
+    text-shadow: 2px 2px #111;
+  }
+  
+  .boks2{
+    color: white;
+    text-shadow: 2px 2px #111;
+  }
+  
+  .boks1:hover{
+    background-color: var(--primary-light);
+    transition: color 0.7s ease-out;
+  }
+  .boks2:hover{
+    background-color: var(--primary-light);
+  }
+  
+  .boks3:hover{
+    background-color: var(--primary-light);
+  }
 
 /*contact */
 section{
@@ -353,10 +394,35 @@ section{
     background: none;
 }
 
+/* footer styling */
+footer{
+    background: #f2b705;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: #200f8c;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
 @media (max-width: 991px){
 .max-width{
         padding: 0 50px;
     } 
+
+    .boks1{
+        margin-top: -150px;
+    }
+
+    .boks2{
+        margin-top: -230px;
+    }
 }
 
 @media (max-width: 947px){
@@ -427,6 +493,15 @@ section{
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .boks1{
+        margin-top: -150px;
+    }
+
+    .boks2{
+        margin-top: -230px;
+    }
+    
 }
 
 @media (max-width: 690px){
@@ -445,6 +520,15 @@ section{
         font-size: 20px;
     }
 
+    .boks1{
+        margin-top: -150px;
+    }
+
+    .boks2{
+        margin-top: -230px;
+    }
+}
+
 @media (max-width: 500px){
     .forside .forside-indhold .tekst-2{
         font-size: 50px;
@@ -453,6 +537,14 @@ section{
     .forside .forside-indhold .tekst-3{
         font-size: 27px;
         }
+
+    .boks1{
+        margin-top: -150px;
+    }
+    
+    .boks2{
+        margin-top: -230px;
+    }
 }
 
 
