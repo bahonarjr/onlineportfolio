@@ -216,40 +216,55 @@ section{
     background-color: #f2b705;
   }
 
-  .boks1{
+.boks1{
       text-align: center;
       padding: 10rem 0;
   }
   
-  .boks2,
-  .boks3{
+.boks2,
+.boks3{
     margin-top: 2rem;
     text-align: center;
     padding: 10rem 0;
   }
   
-  .boks1{
+.boks1{
     color: white;
-    text-shadow: 2px 2px #111;
+    text-shadow: 2px 2px #200f8c;
   }
 
-  .billede1{
-      width: 100%;
+.boks2{
+    color: white;
+    text-shadow: 2px 2px #200f8c;
   }
 
-  .billede2{
-      width: 100%;
-  }
-  
-  .billede3{
-      width: 100%;
-  }
-  
-  .boks2{
+.boks3{
     color: white;
-    text-shadow: 2px 2px #111;
+    text-shadow: 2px 2px #200f8c; 
+  }
+
+.boks4{
+    color: white;
+    text-shadow: 2px 2px #200f8c; 
+    text-align: center;
+  }
+
+.billede1{
+    width: 100%;
+  }
+
+.billede2{
+    width: 100%;
   }
   
+.billede3{
+    width: 100%;
+  }
+
+.billede4{
+    width: 100%;
+  }
+ 
 /*contact */
 section{
     padding: 50px 0;
@@ -423,6 +438,15 @@ footer span a:hover{
     .boks2{
         margin-top: -230px;
     }
+
+    .boks3{
+        margin-top: -230px;
+    }
+
+    .boks4{
+        margin-top: -90px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 947px){
@@ -500,6 +524,14 @@ footer span a:hover{
 
     .boks2{
         margin-top: -230px;
+    }
+
+    .boks3{
+        margin-top: -230px;
+    }
+
+    .boks4{
+        margin-top: -90px;
     }
     
 }
